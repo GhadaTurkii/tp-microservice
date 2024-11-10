@@ -1,0 +1,5 @@
+package it.itbs.inventaire.controller;
+
+public class InventaireController {
+
+}

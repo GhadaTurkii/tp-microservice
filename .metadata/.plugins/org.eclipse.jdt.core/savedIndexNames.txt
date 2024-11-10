@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\LENOVO\Documents\ITBS\3eme\Spring Boot\tpClass\.metadata\.plugins\org.eclipse.jdt.core
+4027240472.index
+1865797976.index
+3298666803.index

@@ -1,0 +1,31 @@
+package it.itbs.inventaire.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import it.itbs.inventaire.entities.Facture;
+import it.itbs.inventaire.repository.InventaireRepo;
+import tn.itbs.article.entities.Article;
+
+public class InventaireService {
+	
+	@Autowired
+	private InventaireRepo inventaireRepo;
+	
+	public List<Facture> getAllInventaires() {
+        return inventaireRepo.findAll();
+    }
+	
+	// we return an optional article -> this one is better wause we manage better the project (ifPresent...)
+    public Optional<Facture> chercherParIdOA(Integer id) {
+        return inventaireRepo.findById(id);
+    }
+
+    // we return an article object
+    public Facture chercherParIdA(Integer id) {
+        return inventaireRepo.findById(id).get();
+    }
+
+}

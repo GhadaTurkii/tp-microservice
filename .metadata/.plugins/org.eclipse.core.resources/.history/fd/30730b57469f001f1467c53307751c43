@@ -1,0 +1,5 @@
+package it.itbs.inventaire.service;
+
+public class InventaireService {
+
+}

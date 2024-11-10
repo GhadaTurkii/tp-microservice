@@ -1,0 +1,9 @@
+package tn.itbs.article.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+//client feign
+@FeignClient(name="microservice-facture", url="http://localhost:9091/facture")
+public interface FactureFeign {
+
+}

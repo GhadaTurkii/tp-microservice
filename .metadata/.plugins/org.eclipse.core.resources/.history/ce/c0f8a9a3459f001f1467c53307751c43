@@ -1,0 +1,11 @@
+package it.itbs.inventaire.entities;
+
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Facture {
+
+	@Id
+}

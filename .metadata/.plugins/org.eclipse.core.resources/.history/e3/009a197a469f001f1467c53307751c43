@@ -1,0 +1,31 @@
+package tn.itbs.article.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import tn.itbs.article.entities.Article;
+import tn.itbs.article.repositories.ArticleRepo;
+
+public class ArticleService {
+
+	@Autowired
+    private ArticleRepo articleRepository;
+
+    public List<Article> getAllArticles() {
+        return articleRepository.findAll();
+    }
+
+    // we return an optional article -> this one is better wause we manage better the project (ifPresent...)
+    public Optional<Article> chercherParIdOA(Integer id) {
+        return articleRepository.findById(id);
+    }
+
+    // we return an article object
+    public Article chercherParIdA(Integer id) {
+        return articleRepository.findById(id).get();
+    }
+
+    
+}

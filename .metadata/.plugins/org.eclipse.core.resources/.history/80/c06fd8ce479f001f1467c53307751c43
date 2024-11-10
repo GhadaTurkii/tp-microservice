@@ -1,0 +1,9 @@
+package tn.itbs.inventaire.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tn.itbs.inventaire.entities.Facture;
+
+public interface InventaireRepo extends JpaRepository<Facture, Integer>{
+
+}

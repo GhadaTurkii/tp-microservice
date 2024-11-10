@@ -1,0 +1,19 @@
+package it.itbs.inventaire.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import it.itbs.inventaire.entities.Facture;
+import it.itbs.inventaire.repository.InventaireRepo;
+
+public class InventaireService {
+	
+	@Autowired
+	private InventaireRepo inventaireRepo;
+	
+	public List<Facture> getAllInventaires() {
+        return inventaireRepo.findAll();
+    }
+
+}

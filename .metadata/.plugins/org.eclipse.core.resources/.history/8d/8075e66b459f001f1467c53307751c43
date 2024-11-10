@@ -1,0 +1,5 @@
+package it.itbs.inventaire.entities;
+
+public class Facture {
+
+}

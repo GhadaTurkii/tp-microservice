@@ -1,0 +1,29 @@
+package tn.itbs.article.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+public class Article {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nom;
+    private Double prixU;
+    private Integer qte;
+
+    @Transient
+	private Factur user;
+	private int idUser;
+	
+	//@ManyToOne
+	//private Utilisateur user;
+	
+	@OneToMany(mappedBy = "projet")
+	private List<Tache> ListTaches = new ArrayList<>();
+}
